@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
+  width: 98%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  background: #f0f4f8; /* Softer background color */
+  color: #333; /* Darker text color for better contrast */
+  font-family: "Arial", sans-serif; /* Change to a more modern font */
+  padding: 20px;
+}
+
+.form-container {
+  width: 80%; /* More responsive width */
+  max-width: 700px; /* Limit max width for larger screens */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #ffffff; /* White background for form */
+  padding: 30px; /* Increase padding */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0 0 20px; /* Remove margin-top for consistency */
+  font-size: 2.5rem; /* Increase heading size */
+  color: #007bff; /* Primary color for heading */
+  font-weight: bold;
+  text-align: center; /* Center text */
+}
+
+h2 {
+  font-size: 1.5rem; /* Increase size for subheadings */
+  color: #007bff; /* Primary color for subheadings */
+  margin: 10px 0 10px; /* Add more spacing */
+  text-align: left; /* Align text to the left */
+}
+
+.pdf-form {
+  width: 100%;
+  height: 80vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adjust space between elements */
+}
+
+label {
+  font-size: 1rem;
+  color: #555; /* Darker color for labels */
+  margin-bottom: 5px;
+}
+
+input {
+  width: 95%;
+  padding: 10px; /* Consistent padding */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s; /* Smooth transition */
+}
+
+input:focus {
+  border-color: #007bff; /* Highlighted border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.invoice-item {
+  border: 1px solid #eee; /* Lighter border for invoice items */
+  border-radius: 5px;
+  padding: 15px; /* More padding for comfort */
+  margin: 10px 0;
+  background-color: #fafafa; /* Light gray background for items */
+}
+
+.submit-btn {
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  padding: 12px 20px; /* Increased padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.open-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745; /* Green button for PDF view/download */
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
-.App-link {
-  color: #61dafb;
+.open-btn:hover {
+  background-color: #218838; /* Darker shade on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pdf-viewer-container {
+  width: 100%;
+
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100vh; /* Fixed height for the viewer */
+}
+
+.close-btn {
+ 
+  background-color: #dc3545; /* Red for close button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add-item-btn {
+  background-color: #007bff; /* Primary color for add button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px; /* Space above the button */
+  transition: background-color 0.3s;
+}
+
+.add-item-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.close-btn:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}
+
+
+.remove-item-btn {
+  background-color: #dc3545; /* Red for remove button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-item-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
 }
